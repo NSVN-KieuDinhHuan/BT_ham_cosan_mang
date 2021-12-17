@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập hàm có sẵn</title>
+</head>
+<body>
+<script>
+    // Bài 1
+    let myColor = ["Red", "Green", "White", "Black"];
+    console.log(myColor.toString())
+    console.log(myColor.join())
+    console.log(myColor.join("+"))
+//    bài 2
+    let so=prompt("nhập vào một dãy số").toString()
+    let new_so=[so[0]]
+     for (i=0;i<so.length-1;i++){
+         if (so[i]%2==0 && so[i+1]%2==0) {
+          new_so.push("-",so[i+1])
+         }else{
+         new_so.push(so[i+1])
+         }
+     }
+     console.log(new_so.join(''))
+    //
+    let str = prompt("Nhâp vao một chuỗi").toString();
+    const UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ ';
+    const LOWER = 'abcdefghijklmnopqrstuvwxyz ';
+    let result=[]
+    for(i=0;i<str.length;i++) {
+        for (j=0;j<UPPER.length;j++){
+            if(str[i]===UPPER[j]){
+                result.push(LOWER[j])
+            }
+            if(str[i]===LOWER[j]){
+                result.push(UPPER[j])
+            }
+        }
+
+    }
+    alert(result.join(""))
+
+</script>
+</body>
+</html>
